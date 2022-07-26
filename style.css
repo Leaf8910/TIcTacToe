@@ -3,6 +3,7 @@
 body {
     margin: 0px;
     height: 100vh;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1440' height='560' preserveAspectRatio='none' viewBox='0 0 1440 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask6576%26quot%3b)' fill='none'%3e%3crect width='1440' height='560' x='0' y='0' fill='url(%23SvgjsRadialGradient6577)'%3e%3c/rect%3e%3cpath d='M1364.987%2c554.682C1395.536%2c552.306%2c1421.638%2c536.124%2c1438.534%2c510.562C1457.792%2c481.425%2c1474.641%2c445.117%2c1457.533%2c414.668C1440.218%2c383.849%2c1400.314%2c378.395%2c1364.987%2c379.657C1332.292%2c380.825%2c1301.417%2c393.702%2c1283.222%2c420.892C1262.572%2c451.751%2c1249.179%2c492.099%2c1268.542%2c523.782C1287.41%2c554.655%2c1328.914%2c557.487%2c1364.987%2c554.682' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float2'%3e%3c/path%3e%3cpath d='M238.795%2c315.931C273.241%2c314.879%2c305.776%2c299.017%2c323.238%2c269.306C340.931%2c239.201%2c340.587%2c202.099%2c323.642%2c171.567C306.167%2c140.08%2c274.775%2c115.67%2c238.795%2c117.154C204.703%2c118.56%2c182.722%2c148.783%2c165.261%2c178.098C147.204%2c208.414%2c128.315%2c243.617%2c144.924%2c274.75C162.162%2c307.061%2c202.19%2c317.049%2c238.795%2c315.931' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float1'%3e%3c/path%3e%3cpath d='M212.267%2c418.178C253.036%2c419.397%2c289.4%2c394.868%2c310.459%2c359.938C332.287%2c323.733%2c338.329%2c279.249%2c318.554%2c241.883C297.514%2c202.127%2c257.247%2c174.601%2c212.267%2c174.4C166.966%2c174.197%2c124.314%2c200.274%2c104.318%2c240.923C86.169%2c277.817%2c102.358%2c319.24%2c123.744%2c354.356C144.024%2c387.656%2c173.295%2c417.013%2c212.267%2c418.178' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float1'%3e%3c/path%3e%3cpath d='M447.92 288.98 a180.21 180.21 0 1 0 360.42 0 a180.21 180.21 0 1 0 -360.42 0z' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float3'%3e%3c/path%3e%3cpath d='M470.94%2c373.624C513.846%2c372.801%2c551.619%2c349.174%2c574.596%2c312.929C599.565%2c273.543%2c614.045%2c224.3%2c591.47%2c183.494C568.342%2c141.687%2c518.631%2c122.674%2c470.94%2c125.558C427.851%2c128.164%2c394.884%2c159.326%2c373.267%2c196.691C351.608%2c234.128%2c339.256%2c279.177%2c360.159%2c317.042C381.637%2c355.949%2c426.506%2c374.476%2c470.94%2c373.624' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float2'%3e%3c/path%3e%3cpath d='M503.59 417.64 a140.83 140.83 0 1 0 281.66 0 a140.83 140.83 0 1 0 -281.66 0z' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float2'%3e%3c/path%3e%3cpath d='M1141.924%2c445.522C1203.155%2c449.679%2c1267.173%2c424.841%2c1296.728%2c371.054C1325.476%2c318.736%2c1305.488%2c256.131%2c1273.789%2c205.546C1244.378%2c158.612%2c1197.278%2c125.95%2c1141.924%2c124.018C1082.933%2c121.959%2c1020.955%2c143.712%2c993.088%2c195.747C966.313%2c245.743%2c990.666%2c303.526%2c1019.697%2c352.246C1047.816%2c399.434%2c1087.119%2c441.801%2c1141.924%2c445.522' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float2'%3e%3c/path%3e%3cpath d='M192.98 85.31 a95.25 95.25 0 1 0 190.5 0 a95.25 95.25 0 1 0 -190.5 0z' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float2'%3e%3c/path%3e%3cpath d='M694.252%2c451.49C735.894%2c452.1%2c777.69%2c433.273%2c796.958%2c396.353C815.141%2c361.512%2c801.729%2c320.272%2c779.73%2c287.705C760.559%2c259.324%2c728.488%2c243.355%2c694.252%2c244.308C661.673%2c245.215%2c634.487%2c264.976%2c616.635%2c292.244C596.453%2c323.07%2c580.489%2c360.297%2c596.632%2c393.417C614.412%2c429.896%2c653.675%2c450.895%2c694.252%2c451.49' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float3'%3e%3c/path%3e%3cpath d='M283.672%2c285.995C334.501%2c286.942%2c392.31%2c286.41%2c419.451%2c243.423C447.795%2c198.531%2c430.923%2c141.316%2c403.861%2c95.64C377.427%2c51.025%2c335.529%2c13.896%2c283.672%2c14.254C232.317%2c14.609%2c191.676%2c52.618%2c166.326%2c97.281C141.356%2c141.274%2c129.666%2c195.567%2c156.378%2c238.525C182.008%2c279.743%2c235.143%2c285.091%2c283.672%2c285.995' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float1'%3e%3c/path%3e%3cpath d='M647.967%2c157.37C674.987%2c156.671%2c699.712%2c143.644%2c714.218%2c120.837C729.967%2c96.077%2c738.655%2c64.092%2c723.138%2c39.187C708.19%2c15.196%2c676.198%2c13.073%2c647.967%2c14.504C622.792%2c15.78%2c598.801%2c25.146%2c584.927%2c46.191C569.431%2c69.696%2c561.615%2c99.935%2c575.501%2c124.425C589.529%2c149.165%2c619.537%2c158.105%2c647.967%2c157.37' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float2'%3e%3c/path%3e%3cpath d='M615.264%2c587.921C666.752%2c589.212%2c722.604%2c576.881%2c748.224%2c532.201C773.752%2c487.681%2c754.905%2c434.071%2c728.828%2c389.87C703.289%2c346.581%2c665.516%2c307.811%2c615.264%2c306.835C563.609%2c305.832%2c518.922%2c340.163%2c493.793%2c385.305C469.377%2c429.166%2c467.557%2c482.759%2c493.369%2c525.813C518.501%2c567.733%2c566.403%2c586.696%2c615.264%2c587.921' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float2'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask6576'%3e%3crect width='1440' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3cradialGradient cx='0%25' cy='50%25' r='1466.97' gradientUnits='userSpaceOnUse' id='SvgjsRadialGradient6577'%3e%3cstop stop-color='rgba(14%2c 42%2c 71%2c 1)' offset='0.42'%3e%3c/stop%3e%3cstop stop-color='rgba(0%2c 31%2c 38%2c 1)' offset='0.94'%3e%3c/stop%3e%3c/radialGradient%3e%3cstyle%3e %40keyframes float1 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(-10px%2c 0)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float1 %7b animation: float1 5s infinite%3b %7d %40keyframes float2 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(-5px%2c -5px)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float2 %7b animation: float2 4s infinite%3b %7d %40keyframes float3 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(0%2c -10px)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float3 %7b animation: float3 6s infinite%3b %7d %3c/style%3e%3c/defs%3e%3c/svg%3e");
     background-size: cover;
     display: flex;
     flex-direction: column;
@@ -11,12 +12,29 @@ body {
     font-family: sans-serif;
   }
   
+  .tictac {
+    display: inline-flex;
+    font-size: 1.4em;
+    font-family: 'Raleway', sans-serif;
+    letter-spacing: 0.1em;
+    gap: 0.7em;
+  }
+
+  .tac {
+    color: red;
+  }
+
+  .tic, .toe {
+    color: yellow;
+  }
+  
   #game-board {
     box-sizing: border-box;
     display: grid;
     grid-template-columns: repeat(3, 100px);
     height: 300px;
     width: 300px;
+    gap: 0px;
   }
   
   #game-board-container {
@@ -25,9 +43,32 @@ body {
     align-items: center;
   }
   
+  .game-tile {
+    font-family: sans-serif;
+    box-sizing: border-box;
+    background-color: #242424;
+    border: 1px solid #121212;;
+    height: 100px;
+    width: 100px;
+    color: #03DAC6;
+    font-size: 68px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+  }
+  
+  .game-tile:hover {
+    cursor: pointer;
+  }
+  
+  .hover-tile {
+    color: gray;
+  }
   
   #victory-line {
     position: absolute;
+    display: none;
     height: 4px;
     width: 270px;
     background-color: #BB86FC;
@@ -48,6 +89,13 @@ body {
   .game-btn {
     width: 300px;
     font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    box-shadow: 9px 8px 8px 5px #000000;
+  }
+  
+  button:hover {
+    background-color: rgb(49, 49, 49);
   }
   
   #pop-up-name-form {
@@ -57,25 +105,37 @@ body {
     background-color: rgba(49, 49, 49, 0.5);
     height: 100vh;
     width: 100vw;
+    justify-content: center;
+    align-items: center;
   }
   
   #change-name-form {
     font-family: 'Raleway', sans-serif;
+    font-weight: 700;
     background: black;
     border: 2px solid #BB86FC;
     border-radius: 5px;
     color: #DCDCDC;
     padding: 10px;
     display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   
-
+  #change-name-form p, #name-text-input {
+    padding: 0px;
+    margin: 10px;
+  }
+  
   #name-text-input {
     width: 146px;
     outline: none;
   }
   
   button {
+    outline: none;
+    border: 2px solid #f2a0fa;
+    background-color: #121212;
     color: #DCDCDC;
     padding: 5px;
     margin: 5px;
