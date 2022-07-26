@@ -49,6 +49,41 @@ const gameBoard = (() => {
     grid[row][column] = char;
   };
 
+  const isGameOver = (currentPlayer) => {
+    adjustVictoryLine('0px', '0deg', '1');
+    //check rows
+    for (let i = 0; i < 3; i++) {
+      if (grid[i].every(tile => tile == 'X') || grid[i].every(tile => tile == 'O')) {
+        if (i == 0) {
+          adjustVictoryLine('-100px');
+        } else if (i == 2) {
+          adjustVictoryLine('100px');
+        }
+        showVictoryLine();
+        currentPlayer.addToScore();
+        return true;
+      }
+    }
+    //check columns 
+    for (let i = 0; i < 3; i++) {
+      const column = [];
+      for (let j = 0; j < 3; j++) {
+        column.push(grid[j][i]);
+      }
+      if (column.every(tile => tile == 'X') || column.every(tile => tile == 'O')) {
+        if (i == 0) {
+          adjustVictoryLine('-100px', '-90deg');
+        } else if (i == 1) {
+          adjustVictoryLine('0px', '-90deg');
+        } else if (i == 2) {
+          adjustVictoryLine('100px', '-90deg');
+        }
+        showVictoryLine();
+        currentPlayer.addToScore();
+        return true;
+      }
+      
+    }
     //check diagonals
     if ((grid[0][0] === grid[1][1]) && (grid[1][1] === grid[2][2]) && (grid[1][1] != '')) {
       adjustVictoryLine('0px', '45deg', '1.3');
@@ -153,12 +188,46 @@ const AI = (() => {
       return false;
     }
 
+    const checkForWin = (char) => {
+      let moves = getLegalMoves();
+      let winningMove = null;
+      moves.forEach((move) => {
+        console.log('testing', move);
+        if (resultsInWin(char, move[0], move[1])) {
+          winningMove = move;
+        }
+      })
+      return winningMove;
+    }
+
+    const getLegalMoves = () => {
+      let grid = deepCopy(gameBoard.grid);
+      let legalMoves = [];
+      grid.forEach((row, yIndex) => {
+        row.forEach((tile, xIndex) => {
+          if (tile === '') legalMoves.push([yIndex, xIndex]);
+        })
+      })
+      return legalMoves;
+    }
+
+    const checkCorners = () => {
+      let grid = deepCopy(gameBoard.grid);
+      const corners = [[0,0], [0,2], [2,0], [2,2]];
+      for (let i = 0; i < 4; i++) {
+        [y,x] = corners[i];
+        if (grid[y][x] === '') {
+          return [y,x];
+        }
+      }
+      return null;
+    }
 
     return {
       checkForWin,
       checkCorners
     }
-});
+})();
 
 
 
@@ -187,7 +256,29 @@ const game = (() => {
     }
     
     if (difficulty === 'Hard') {
-    
+      // first try to place in the center
+      if (gameBoard.grid[1][1] === '') {
+        x = 1;
+        y = 1;
+      } else {
+        //if theres a win available do it, then try to block a win from opponent, then try to play a corner, otherwise do random.
+        if(AI.checkForWin('O')) {
+          [y, x] = AI.checkForWin('O');
+        } else if(AI.checkForWin('X')) {
+          [y, x] = AI.checkForWin('X');
+        } else if(AI.checkCorners()){
+          [y, x] = AI.checkCorners();
+        } else {
+          x = Math.floor(Math.random() * 3);
+          y = Math.floor(Math.random() * 3);
+          while (gameBoard.grid[y][x] != '') {
+            x = Math.floor(Math.random() * 3);
+            y = Math.floor(Math.random() * 3);
+          } 
+        }
+      }
+    }
+    gameBoard.addCharToGrid(computerPlayer.char, y, x);
   }
 
   const startGame = () => {
@@ -231,8 +322,42 @@ const game = (() => {
 
  
 
- 
-};
+  const hideNameForm = () => {
+    document.getElementById('pop-up-name-form').style.display = 'none';
+  }
+
+  const showNameForm = () => {
+    document.getElementById('pop-up-name-form').style.display = 'flex';
+  }
+
+  const changeName = (e) => {
+    e.preventDefault();
+    userPlayer.changeName(e.target.name.value);
+    hideNameForm();
+    printCards();
+  }
+
+  const toggleDifficulty = () => {
+    if (difficulty === 'Easy') {
+      difficulty = "Hard";
+    } else {
+      difficulty = 'Easy';
+    }
+    document.getElementById('difficulty-btn').textContent = `Difficulty: ${difficulty}`
+  }
+
+  return {
+    currentPlayer,
+    printCards,
+    startGame,
+    computerMove,
+    playRound,
+    hideNameForm,
+    showNameForm,
+    toggleDifficulty,
+    changeName
+  }
+})();
 
 const deepCopy = (arr) => {
   let copy = [];
@@ -249,7 +374,7 @@ const deepCopy = (arr) => {
   })
   return copy;
 }
-)}
+
 document.getElementById('change-name-form').addEventListener('submit', game.changeName);
 
 
