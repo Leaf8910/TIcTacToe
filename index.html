@@ -6,14 +6,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tic Tac Toe</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&family=Raleway:wght@200&family=Secular+One&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1 class="title">Tic-Tac-Toe</h1>
-        <p class="subtext"><span class="player-name">Player 1</span>, make your move.</p>
-    </header>
-    <main class="gameboard">
-        <div class="squares"></div>
-    </main>
-    <script src="app.js" defer></script>
+    <div class="tictac">
+        <h1 class="tic">tic</h1>
+        <h1 class="tac">Tac</h1>
+        <h1 class="toe">toe.</h1>
+    </div>
+    <div id='game-board-container'>
+        <div id='victory-line'></div>
+        <div id='game-board'></div>
+    </div>
+    <div id="score-card">
+      <div id="user-score"></div>
+      <div id="computer-score"></div>
+    </div>
+    <button id="new-game-btn" onclick="game.startGame()" class="game-btn">New Game</button>
+    <button id="change-name-btn" onclick="game.showNameForm()" class="game-btn">Change Name</button> 
+    <button id="difficulty-btn" onclick="game.toggleDifficulty()" class="game-btn">Difficulty: Easy</button>
+    <div id='pop-up-name-form'>
+      <form id='change-name-form' autocomplete="off">
+        <p>Enter your name?</p>
+        <input type='text' id="name-text-input" placeholder="Name" name='name' required>
+        <button type='submit' class="form-btn">Submit</button><button onclick='game.hideNameForm()' type='button'>Cancel</button>
+      </form>
+    </div>
+      <script src="app.js" defer></script>
 </html>
