@@ -33,11 +33,13 @@ const gameBoard = (() => {
     })
   };
 
+  // Gets char to update field
   const updateTile = (tileDiv, char) => {
     addCharToGrid(char, tileDiv.getAttribute('data-y'), tileDiv.getAttribute('data-x'))
     printGrid();
   };
 
+  // removes the inputs from game-board field
   const clearGrid = () => {
     const gameGrid = document.getElementById('game-board');
     while (gameGrid.firstChild) {
@@ -45,10 +47,12 @@ const gameBoard = (() => {
     }
   };
 
+  // adds the current player char to the grid
   const addCharToGrid = (char, row, column) => {
     grid[row][column] = char;
   };
 
+  // current player score is incremented to the total score
   const isGameOver = (currentPlayer) => {
     adjustVictoryLine('0px', '0deg', '1');
     //check rows
@@ -106,6 +110,7 @@ const gameBoard = (() => {
     return false;
   }
 
+  // iterates through every grid array then to clear the input then printGrid()
   const resetGrid = () => {
     hideVictoryLine();
     clearGrid();
@@ -117,14 +122,17 @@ const gameBoard = (() => {
     printGrid();
   }
 
+  //makes the victory line visible when won
   const showVictoryLine = () => {
     document.getElementById('victory-line').style.display = 'flex';
   }
 
+  // hides the victory line with display 'none' in victory-line
   const hideVictoryLine = () => {
     document.getElementById('victory-line').style.display = 'none';
   }
 
+  // calculates the victory line current rotation
   const adjustVictoryLine = (moveY, rotate='0deg', length='1') => {
     let victoryLine = document.getElementById('victory-line');
     victoryLine.style.transform = `rotate(${rotate}) translateY(${moveY}) scaleX(${length})`;
@@ -139,6 +147,7 @@ const gameBoard = (() => {
   }
 })();
 
+//sets the factory function
 function createPlayer(name, char, score) {
   return { 
     name, 
@@ -233,19 +242,21 @@ const AI = (() => {
 
 const game = (() => {
   
+  // Sets the default difficulty to easy
   let currentPlayer = userPlayer;
   let difficulty = 'Easy';
   
+  // shows current players score
   const printCards = () => {
     document.getElementById('user-score').textContent = `${userPlayer.name}: ${userPlayer.score}`;
     document.getElementById('computer-score').textContent = `${computerPlayer.name}: ${computerPlayer.score}`;
   }
 
-
+  // computer moveset difficulty
   const computerMove = () => {
     let x;
     let y;
-    //easy mode for random placement
+    //easy mode for random placement randomizes its placement to chance
     if (difficulty === 'Easy') {
       x = Math.floor(Math.random() * 3);
       y = Math.floor(Math.random() * 3);
@@ -254,9 +265,9 @@ const game = (() => {
         y = Math.floor(Math.random() * 3);
       } 
     }
-    
+        
     if (difficulty === 'Hard') {
-      // first try to place in the center
+      // first try to place in the center tries the best optimal route to winning
       if (gameBoard.grid[1][1] === '') {
         x = 1;
         y = 1;
@@ -291,6 +302,7 @@ const game = (() => {
     }
   }
 
+  // total games played
   const computerGoesFirst = () => {
     let totalGames = userPlayer.score + computerPlayer.score;
     console.log(totalGames);
@@ -330,6 +342,7 @@ const game = (() => {
     document.getElementById('pop-up-name-form').style.display = 'flex';
   }
 
+  // user namechange using form
   const changeName = (e) => {
     e.preventDefault();
     userPlayer.changeName(e.target.name.value);
@@ -337,6 +350,7 @@ const game = (() => {
     printCards();
   }
 
+  // difficulty toggle
   const toggleDifficulty = () => {
     if (difficulty === 'Easy') {
       difficulty = "Hard";
